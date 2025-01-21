@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" id="display" readonly />
+
+      <div class="buttons">
+        <button id="ac" onclick="clickButtons('AC')">AC</button>
+        <button id="clear" onclick='clickButtons("C")'>C</button>
+        <button id="mod" onclick="Operation('%')">%</button>
+        <button id="div" onclick='Operation("/")'>/</button>
+        <button id="seven" onclick="clickButtons(7)">7</button>
+        <button id="eight" onclick="clickButtons(8)">8</button>
+        <button id="nine" onclick="clickButtons(9)">9</button>
+        <button id="mult" onclick='Operation("*")'>*</button>
+        <button id="four" onclick="clickButtons(4)">4</button>
+        <button id="five" onclick="clickButtons(5)">5</button>
+        <button id="six" onclick="clickButtons(6)">6</button>
+        <button id="min" onclick='Operation("-")'>-</button>
+        <button id="one" onclick="clickButtons(1)">1</button>
+        <button id="two" onclick="clickButtons(2)">2</button>
+        <button id="three" onclick="clickButtons(3)">3</button>
+        <button id="plus" onclick='Operation("+")'>+</button>
+        <button id="zero" onclick="clickButtons(0)">0</button>
+        <button id="twoZero" onclick='clickButtons("00")'>00</button>
+        <button id="dot" onclick='clickButtons(".")'>.</button>
+        <button id="equals" onclick='Operation("=")'>=</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
