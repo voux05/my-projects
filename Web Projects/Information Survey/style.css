@@ -1,0 +1,265 @@
+:root {
+  --formhght: 500px;
+  --form-padding: 40px;
+  --input-border-radius: 10px;
+  --form-border-radius: 20px;
+  --focus-color: lightgray;
+  --def-transition: 0.5s;
+  --label-font-size: 10px;
+  --transparency: rgba(0, 0, 0, 0.4);
+  --blur-op: blur(8px);
+}
+* {
+  font-family: sf pro display;
+  position: relative;
+  user-select: none;
+}
+
+body {
+  background-image: url("images/gruv-sushi-streets.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+input {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.container h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.container .header-information {
+  margin-bottom: 120px;
+}
+
+.container .header-subjects {
+  margin-bottom: 120px;
+}
+
+.container .header-family-information {
+  margin-bottom: 120px;
+}
+
+.container h1,
+.container label {
+  color: white;
+}
+
+.my-information {
+  background-color: beige;
+  width: 300px;
+  height: var(--formhght);
+  position: absolute;
+  left: 0px;
+  display: grid;
+  place-items: center;
+  margin-left: 50px;
+  border-radius: var(--form-border-radius);
+  background-color: var(--transparency);
+  backdrop-filter: var(--blur-op);
+}
+
+.subject-code {
+  background-color: lightblue;
+  width: 300px;
+  height: var(--formhght);
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  border-radius: var(--form-border-radius);
+  background-color: var(--transparency);
+  backdrop-filter: var(--blur-op);
+}
+
+.family-information {
+  background-color: lavender;
+  width: 300px;
+  height: var(--formhght);
+  position: absolute;
+  right: 0;
+  display: grid;
+  place-items: center;
+  margin-right: 50px;
+  border-radius: var(--form-border-radius);
+  background-color: var(--transparency);
+  backdrop-filter: var(--blur-op);
+}
+
+.my-information label,
+.my-information input {
+  position: relative;
+  bottom: 100px;
+  left: 50px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.my-information label {
+  font-size: var(--label-font-size);
+  font-weight: 5;
+}
+
+.my-information input {
+  border-radius: var(--input-border-radius);
+  border: none;
+  outline: none;
+  text-align: center;
+  transition: var(--def-transition);
+}
+
+.my-information input[type="file"] {
+  position: relative;
+  bottom: 120px;
+  left: 40px;
+  color: white;
+}
+
+.my-information input:focus:not(input[type="file"]) {
+  background-color: var(--focus-color);
+  transition: var(--def-transition);
+}
+
+.my-information input::placeholder {
+  font-size: 10px;
+}
+
+.my-information .gender {
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  position: relative;
+  left: 20px;
+  bottom: 30px;
+  outline: none;
+  border-radius: var(--input-border-radius);
+  transition: var(--def-transition);
+  background-color: white;
+}
+
+.my-information .gender:active {
+  background-color: var(--focus-color);
+  transition: var(--def-transition);
+}
+
+.my-information button {
+  position: relative;
+  bottom: 30px;
+  left: 75px;
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: white;
+  font-size: 10px;
+  transition: var(--def-transition);
+}
+
+.my-information button:hover {
+  background-color: var(--focus-color);
+  transition: var(--def-transition);
+}
+
+.subject-code label,
+.subject-code input {
+  position: relative;
+  bottom: 100px;
+  left: 00px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.subject-code label {
+  font-size: var(--label-font-size);
+  font-weight: 5;
+}
+
+.subject-code input {
+  border-radius: var(--input-border-radius);
+  border: none;
+  outline: none;
+  text-align: center;
+  transition: var(--def-transition);
+}
+
+.subject-code input:focus {
+  background-color: var(--focus-color);
+  transition: var(--def-transition);
+  content-visibility: visible;
+}
+
+.subject-code input::placeholder {
+  font-size: 10px;
+}
+
+.subject-code button {
+  position: relative;
+  bottom: 90px;
+  left: 31px;
+  width: 100px;
+  font-size: 10px;
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: var(--def-transition);
+}
+
+.subject-code button:hover {
+  background-color: var(--focus-color);
+  transition: var(--def-transition);
+}
+
+.family-information label,
+.family-information input {
+  position: relative;
+  bottom: 100px;
+  left: 20px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.family-information label {
+  font-size: var(--label-font-size);
+}
+
+.family-information input {
+  border-radius: var(--input-border-radius);
+  border: none;
+  outline: none;
+  text-align: center;
+  transition: var(--def-transition);
+}
+
+.family-information input::placeholder {
+  font-size: 10px;
+}
+
+.family-information input:focus {
+  transition: var(--def-transition);
+  background-color: var(--focus-color);
+}
+
+.family-information button {
+  position: relative;
+  bottom: 90px;
+  left: 50px;
+  width: 100px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: white;
+
+  font-size: 10px;
+}
