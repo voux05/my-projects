@@ -1,0 +1,48 @@
+* {
+    font-family: courier new;
+}
+
+body {
+    background-image: url("images/minimalist.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    user-select: none;
+}
+
+.container h1 {
+    font-size: 5em;
+    animation-name: registeredAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes registeredAnimation {
+    20% {
+        color: black;
+    }
+
+    40% {
+        color: green;
+        scale: 1.5;
+    }
+
+    60% {
+        color: skyblue;
+    scale: 1.5;
+    rotate: 360deg;
+    }
+
+    80% {
+        color: purple;
+    }
+
+    100% {
+        color: maroon;
+    }
+}
