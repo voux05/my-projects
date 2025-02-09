@@ -1,0 +1,79 @@
+:root {
+    --border-shadow: 0 10px 40px rgba(158, 163, 172, 0.8);
+}
+* {
+    font-family: courier new;
+}
+
+body {
+    background-image: url("images/minimalist.jpg");
+    background-size: 150%;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: var(--border-shadow);
+    padding: 30px;
+    position: relative;
+    background-color: transparent;
+    backdrop-filter: blur(32px);
+}
+
+.title {
+    position: relative;
+    left: 25%;
+}
+
+.title :where(:nth-child(1), :nth-child(2)) {
+    color: darkblue;
+}
+
+.container label {
+    display: inline-block;
+    width: 400px;
+}
+
+.container .choose-place :where(label) {
+    width: 150px;
+}
+
+.choose-place input[type='checkbox'] {
+    margin-left: -30px;
+}
+
+.choose-place input[type='text'] {
+    margin-left: 99px;
+}
+
+.container input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid;
+    outline: none;
+    background-color: transparent;
+}
+
+.container button {
+    position: relative;
+    left: 500px;
+    top: 20px;
+    padding: 10px;
+    width: 100px;
+    background-color: lightgray;
+    border-radius: 10px;
+    border: none;
+}
+
+.container button:active {
+    background-color: darkgray;
+}
