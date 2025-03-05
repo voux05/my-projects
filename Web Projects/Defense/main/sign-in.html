@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/loginpage/sign-in.css">
+</head>
+<body>
+    <video id="background" autoplay muted loop>
+        <source src="assets/videos/bg.webm">
+    </video>
+    <div class="container">
+        <div class="title">
+            <h1>SIGN IN ON <strong>RESERVENTURE</strong></h1>
+        </div>
+        <div class="form">
+            <label for="">Email Address</label>
+            <input type="text" id="email"> <img class="email-icon" src="assets/icons/email.png" alt="">
+            <label for="">Username</label>
+            <input type="text" name="" id="username"> <img class="user-icon" src="assets/icons/user.png" alt="">
+            <label for="">Password</label>
+            <input type="text" maxlength="8" id="password"> <img class="pass-icon" src="assets/icons/lock.png" alt=""> <img id="show-icon" src="assets/icons/show.png" alt=""> <img id="hide-icon" src="assets/icons/hide.png" alt="">
+            
+            <button id="sign-in-button">Sign In</button>
+            
+            <div class="other-options">
+                <div class="forgot-password">
+                    <label for=""><a href="forgot-password.html">Forgot Password?</a></label>
+                </div>
+                <div class="create-account">
+                    <label for=""><a href="create-account.html">Create Account</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/loginpage/show-password.js"></script>
+</body>
+</html>

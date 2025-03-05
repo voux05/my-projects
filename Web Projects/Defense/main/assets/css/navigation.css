@@ -1,0 +1,53 @@
+:root {
+    --bg-color: #253745;
+    --text-s: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    font-family: helvetica;
+}
+
+.navigation {
+    width: 100vw;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 55em;
+}
+
+.navigation h1 {
+    display: block;
+    font-weight: 1000;
+    font-size: 2.5rem;
+    letter-spacing: 10px;
+    text-shadow: var(--text-s);
+}
+
+.navigation h1 > a {
+    text-decoration: none;
+    color: black;
+}
+
+.navigation .nav-options {
+    text-align: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-right: 6em;
+}
+
+.nav-options a {
+    color: rgb(172, 172, 172);
+    font-weight: 1000;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-options a:hover {
+    color: black;
+}
+

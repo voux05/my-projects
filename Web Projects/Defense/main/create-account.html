@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/loginpage/create-account.css">
+</head>
+<body>
+    <video id="background" autoplay muted loop>
+        <source src="assets/videos/bg.webm">
+    </video>
+    <div class="container">
+        <div class="title">
+            <h1>REGISTER ON <strong>RESERVENTURE</strong></h1>
+        </div>
+        <div class="form">
+            <label >Email Address</label> 
+            <input type="text" id="email"> <img class="email-icon" src="assets/icons/email.png" alt="">
+            <label>Username</label>
+            <input type="text" name="" id="username"> <img class="user-icon" src="assets/icons/user.png" alt="">
+            <label>Password</label>
+            <input type="password" maxlength="8" id="password"> <img class="pass-icon" src="assets/icons/lock.png" alt=""> <img id="show-icon" src="assets/icons/show.png" alt=""> <img id="hide-icon" src="assets/icons/hide.png" alt="">
+            <label>Contact Number</label>
+            <input type="tel" aria-label="phone" id="contact" maxlength="11" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"> <img class="contact-icon" src="assets/icons/phone.png" alt="">
+            
+            <button id="sign-in-button" onclick="register()">Register</button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/loginpage/show-password.js"></script>
+    <script>
+    function register() {
+        var getEmail = document.getElementById('email').value;
+        var getUser = document.getElementById('username').value;
+        var getPass = document.getElementById('password').value;
+        var getContact = document.getElementById('contact').value;
+
+        if (getEmail.length == 0 || getUser.length == 0 || getPass.length == 0 || getContact.length == 0) {
+            window.alert("Fill up all fields.");
+        } else {
+            const req = new XMLHttpRequest();
+            req.onload = function() {
+                document.getElementById('email').value = '';
+                document.getElementById('username').value = '';
+                document.getElementById('password').value = '';
+                document.getElementById('contact').value = '';
+
+                if (this.responseText=='error') {
+                    window.alert("User already exists.");
+                } else {
+                }
+            }
+            req.open("POST", "assets/database/create-account.php");
+            req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            req.send("email="+getEmail+"&user="+getUser+"&pass="+getPass+"&contact="+getContact);
+        }
+    } 
+    </script>
+</body>
+</html>
