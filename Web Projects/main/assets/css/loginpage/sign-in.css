@@ -1,0 +1,192 @@
+:root {
+    --text-s: 0 10px 40px rgba(0, 0, 0, 0.2);
+    --box-s: 0 10px 40px rgba(0, 0, 0, 0.4);
+    --bg-color: #253745;
+}
+
+* {
+    font-family: helvetica;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#background {
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    bottom: 0;
+    right: 0;
+}
+
+.container {
+    box-shadow: var(--text-s);
+    width: 75em;
+    height: 35em;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+}
+
+.container>.title {
+    text-align: center;
+    position: absolute;
+    top: 2em;
+}
+
+.container>.title h1 {
+    font-weight: 1000;
+    color: var(--bg-color);
+    font-size: 2.25rem;
+    letter-spacing: 8px;
+    text-shadow: var(--text-s);
+}
+
+.container > .title strong {
+    font-weight: 1000;
+    position: relative;
+}
+
+.container > .title strong::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+    background-color: var(--bg-color);
+    width: 11em;
+    height: 2px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    margin: auto;
+    position: relative;
+    top: 2.25em;
+}
+
+.form > label {
+    margin-bottom: 8px;
+    font-family: arial;
+    font-weight: 600;
+    margin-top: 2px;
+    font-size: 0.9em;
+    width: fit-content;
+    background-color: white;
+    position: absolute;
+    color: rgb(100, 100, 100);
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.form :is(input:focus, input:valid) {
+    border: 2px solid var(--bg-color);
+}
+
+/* .form .email-label {
+    transform: translate(40%, 40%);
+    padding: 2px;
+}
+
+.form :is(input:focus, input:valid) + .email-label {
+    transform: translate(20%, -50%);
+} */
+
+.form .username-label {
+    transform: translate(20%, 40%);
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.form :is(input:focus, input:valid) + .username-label {
+    transform: translate(10%, -50%);
+}
+
+.form .password-label {
+    transform: translate(20%, 340%);
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.form :is(input:focus, input:valid) + .password-label {
+    transform: translate(10%, 260%);
+}
+
+.form input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border: 2px solid rgb(200, 200, 200);
+    outline: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.form button {
+    padding: 10px;
+    background-color: var(--bg-color);
+    color: white;
+    border-radius: 15px;
+    border: 1px solid;
+    margin-top: 20px;
+    font-weight: 1000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.other-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 50px;
+}
+
+.other-options a {
+    text-decoration: none;
+    color: var(--bg-color);
+    font-weight: 1000;
+    text-shadow: var(--box);
+}
+
+img {
+    position: absolute;
+    scale: 0.040;
+}
+
+/* .email-icon {
+    left: -17.5em;
+    top: -14.65em;
+} */
+
+.user-icon {
+    left: -17.5em;
+    top: -14.65em;    
+}
+
+.pass-icon {
+    left: -17.5em;
+    top: -10.65em;
+}
+
+.contact-icon {
+    left: -17.5em;
+    top: 1.45em;
+}
+
+#show-icon, #hide-icon {
+    top: -6.73em;
+    right: -14.5em;
+    cursor: pointer;
+}
+
+#hide-icon {
+    display: none;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserventure - Easy Booking for your Next Adventure.</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/homepage/main.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="icon" href="assets/icons/android-chrome-192x192.png">
+</head>
+
+<body>
+    <video class="background" autoplay muted loop>
+        <source src="assets/videos/bg.webm">
+    </video>
+    <div id="main-container" class="container">
+        <nav id="main-navigation" class="navigation">
+            <h1><a href="main.html">RESERVENTURE</a></h1>
+
+            <div class="nav-options">
+                <a id="home-tag" href="main.html">Home</a>
+                <a href="destinations.html">Destinations</a>
+                <a id="dashboard-tag" href="dashboard.html">Dashboard</a>
+                <a href="about-us.html">About Us</a>
+                <a href="sign-in.php">Log Out</a>
+            </div>
+        </nav>
+        <img src="assets/icons/beacon.png" alt="" id="chat-icon">
+        <div class="main-header">
+            <div class="video-section">
+                <video class="video-header" autoplay muted loop>
+                    <source src="assets/videos/video-header.mp4">
+                </video>
+                <div class="video-description">
+                    <h1>Your Journey Starts With <br> Booking!</h1>
+                    <h2>Book your Dream, Anytime, Anywhere.</h2>
+                </div>
+                <div class="search-section">
+                    <div class="search-location">
+                        <label for="">Location</label>
+                        <input type="text" id="location" placeholder="Where are you going?" name="" id="">
+                    </div>
+                    <hr>
+                    <div class="search-check-in">
+                        <label for="">Check In</label>
+                        <input type="date" id="check-in" placeholder="Add dates">
+                    </div>
+                    <hr>
+                    <div class="search-check-out">
+                        <label for="">Check Out</label>
+                        <input type="date" id="check-out" placeholder="Add dates" name="" id="">
+                    </div>
+                    <hr>
+                    <div class="search-guest">
+                        <label for="">Guests</label>
+                        <select id="pax">
+                            <option selected disabled>Select Guests</option>
+                            <option value="2-pax">2 Pax</option>
+                            <option value="4-pax">4 Pax</option>
+                            <option value="6-pax">6 Pax</option>
+                        </select>
+                    </div>
+                    <img id="search-button" src="assets/icons/search-icon.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="secondary-header">
+            <div class="popular-title">
+                <h1>Popular Tourist Spots</h1>
+            </div>
+            <div class="popular-spots">
+                <div id="luzon-direct" class="luzon-spot">
+                    <img src="assets/css/homepage/images/popular-spots/rizal.jpeg" alt="">
+                    <h1>Luzon</h1>
+                    <div class="popular-spots-details">
+                        <div class="spots-headers">
+                            <h1>Rizal Park</h1>    
+                            <h2>Manila, Metro Manila</h2>
+                            <h2>Luzon</h2>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="visayas-spot">
+                    <img id="visayas-direct" src="assets/css/homepage/images/popular-spots/magellan.jpeg" alt="">
+                    <h1>Visayas</h1>
+                    <div class="popular-spots-details">
+                        <div class="spots-headers">
+                            <h1>Magellan's Cross</h1>
+                            <h2>Cebu City</h2>
+                            <h2>Visayas</h2>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="mindanao-spot">
+                    <img id="mindanao-direct" src="assets/css/homepage/images/popular-spots/tinago.jpeg" alt="">
+                    <h1>Mindanao</h1>
+                    <div class="popular-spots-details">
+                        <div class="spots-headers">
+                            <h1>Tinago Falls</h1>
+                            <h2>Iligan City, Lanao Del Norte</h2>
+                            <h2>Mindanao</h2>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="third-header">
+
+        </div>
+    </div>
+    <script src="assets/js/homepage/navigators.js"></script>
+</body>
+
+</html>
